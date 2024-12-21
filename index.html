@@ -1,0 +1,66 @@
+<html>
+ <head>
+  <title>
+   Countdown Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-pink-500">
+  <div class="text-center text-white">
+   <div class="relative">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnQw2OKDBUlTYDwl4DPfJ7eyhyzsPPOadXfg&s" class="w-full h-full object-cover opacity-50" height="500" src="https://storage.googleapis.com/a1aa/image/V9bb0QFrX1rbD1g94EiojKUin62tkfPEGKCEO1TETuke5F9TA.jpg" width="500"/>
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+     <div class="flex items-center space-x-4 mb-4">
+      <img src="https://trubusiman.sch.id/wp-content/uploads/2023/02/Desain-tanpa-judul.png" class="h-50" height="50" src="https://storage.googleapis.com/a1aa/image/QC8uevGgU51yH6aMIR3f4EDTa5GM4UdJPFaTIyCk1XG75F9TA.jpg" width="100"/>
+     </div>
+     <h1 class="text-5xl font-bold">
+<div id="countdown" class="text-7xl font-bold text-white"></div>
+
+<script>
+  // Tanggal target
+  const targetDate = new Date("2024-12-30T00:00:00").getTime();
+
+  // Update hitung mundur setiap detik
+  const countdownFunction = setInterval(function() {
+    // Dapatkan tanggal dan waktu sekarang
+    const now = new Date().getTime();
+
+    // Hitung selisih waktu
+    const distance = targetDate - now;
+
+    // Hitung hari, jam, menit, dan detik
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Tampilkan hasil di elemen dengan id "countdown"
+    document.getElementById("countdown").innerHTML = days + " Hari " + hours + " Jam " + minutes + " Menit " + seconds + " Detik ";
+
+    // Jika hitung mundur selesai, tampilkan pesan
+    if (distance < 0) {
+      clearInterval(countdownFunction);
+      document.getElementById("countdown").innerHTML = "Waktu Habis!";
+    }
+  }, 1000);
+</script>
+     </h1>
+     <p class="text-7xl mt-7">
+      Hari lagi!
+     <p class="text-6xl mt-7">
+      -- Menuju akhir pembayaran SPP Januari 2025, sebagai syarat masuk asrama --
+      <p class="text-5xl mt-9">
+  Cek di tautan:
+</p>
+<p class="text-4xl font-bold">
+  <a href="https://miftahadm.github.io/cari2024/" target="_blank" class="text-white underline">
+    Ruang Administrasi
+  </a>
+</p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
